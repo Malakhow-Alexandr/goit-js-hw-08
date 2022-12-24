@@ -33,10 +33,10 @@ function onFormSubmit(evt) {
 }
 
 function populateFormOutput() {
-  if (parseData.email && parseData.message) {
+  if (savedData && parseData.email) {
     refs.formInput.value = parseData.email;
+  }
+  if (savedData && parseData.message) {
     refs.formTextarea.value = parseData.message;
-  } else {
-    alert('Sorry! Something gone wrong. Please enter your details again!');
   }
 }
